@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <header>
+        <h1>Counter</h1>
+    </header>
+    <main>
+        <input type="number" name="counter" id="counter" value="0" readonly>
+        <div>
+            <button class="counterButton" id="minusFive" onclick="minusFive()">-5</button>
+            <button class="counterButton" id="minusOne" onclick="minusOne()">-1</button>
+            <button class="counterButton" id="reset" onclick="reset()">R</button>
+            <button class="counterButton" id="plusOne" onclick="addOne()">+1</button>
+            <button class="counterButton" id="plusFive" onclick="addFive()">+5</button>
+        </div>
+    </main>
+    <section>
+        <h2>History</h2>
+        <section id="history"></section>
+    </section>
+    <script src="counter.js"></script>
+</body>
+
+</html>

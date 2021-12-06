@@ -1,0 +1,69 @@
+body {
+    background-color: beige;
+}
+
+h1{
+    color:darkcyan;
+    text-align: center;
+    width:rgb(20, 20, 177) 1000px;
+    padding:10px;
+    border:rgb(2, 1, 1) 50px;
+    margin: 50px;
+    border-style: groove;
+    border-right-color: slateblue;
+    border-left-color: slateblue;
+}
+
+p.right{
+    color:darkgreen;
+    text-align:right
+}
+
+a:hover{
+    color:fuchsia;
+}
+
+#subheading{
+    text-align: center;
+    color:mediumseagreen;
+}
+
+p.center{
+    color:orangered;
+    text-align: center;
+}
+
+a:visited{
+    color:#a773ac;
+}
+
+p::first-letter{
+    color:rgb(71, 114, 255);
+}
+
+div.scroll {
+    position: absolute;
+    right: 5px;
+    width: 300px;
+    height: 100px;
+    background-color: #b0e0e6;
+}
+div {
+    overflow: scroll;
+}
+h2.hidden{
+    display: none;
+}
+h2.vis {
+ visibility: hidden;
+}
+.container {
+    position: relative;
+    }
+ .bottomright {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size:18px;
+    }
+

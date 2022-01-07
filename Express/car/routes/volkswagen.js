@@ -1,9 +1,16 @@
 const router = require('express').Router();
 
+//import in nested middleware
+const nestedExp=require('../middleware.js');
 
-router.get("/readAll", (req,res)=>{
+router.get('/readAll',nestedExp, (req,res)=>{
     console.log("read all volkswagens");
     res.status(202).send("read all volkwagens");
+});
+
+router.get('/get/:id',(req,res)=>{
+    console.log(req.params.id);
+    res.status(202).send(`document of ${req.params.id}requested`);
 });
 
 router.post('/newVolkswagen',(req,res)=>{
@@ -24,6 +31,13 @@ router.delete('/delete/:id',(req,res)=>{
     res.status(202).send(`Volkswagen has been deleted`);
 });
 
+//delete using query params
+// delete?colour=red
+router.delete('/delete',(req,res)=>{
+    console.log(req.query);
+    //204 doesnt return anything
+    res.status(204);
+});
 
 //export router
 module.exports= router;

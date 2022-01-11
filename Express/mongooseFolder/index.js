@@ -22,6 +22,12 @@ mongoose.connect('mongodb://localhost:27017/cars', {useNewUrlParser: true},
 
 app.use('/bmw', bmwRoutes);
 
+//add error handling middleware
+app.use((err,req,res,next)=>{
+    console.log(err.stack);
+    res.status(500).send(err.message);
+})
+
 const server = app.listen(5015, () => {
     console.log("server started");
 });

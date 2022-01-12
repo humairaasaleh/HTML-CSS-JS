@@ -20,7 +20,13 @@ app.use((err,req,res,next)=>{
     next(err);
 })
 
-mongoose.connect('mongodb://localhost:27017/beerCollection', {useNewUrlParser: true}, 
+//prod db uri
+// let dbURI="beerCollection";
+
+//test db uri
+let dbURI="testBeer"
+
+mongoose.connect(`mongodb://localhost:27017/${dbURI}`, {useNewUrlParser: true}, 
 (error) => {
     if (error) {
         console.log('cannot connect to db');

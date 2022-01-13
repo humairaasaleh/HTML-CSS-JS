@@ -1,11 +1,13 @@
-const ContactCard = ({name,phone,image,quote,address}) => {
+import ContactCardSubChild from "./ContactCardSubChild";
+
+const ContactCard = ({arrayCard}) => {
+    console.log(arrayCard);
     return (  
         <div>
-            <h2>Name of contact:{name}</h2>
-            <h2>Phone number:{phone}</h2>
-            <img src={image} alt="cat"  width="250" height="250"/>
-            <h2>a quote: {quote}</h2>
-            <h2>address: {address}</h2>
+            {arrayCard.map((contact, i)=>{
+                console.log(contact);
+                return<ContactCardSubChild key={i} contact={contact}/>
+            })}
         </div>
     );
 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import GreetChild from './GreetChild';
 
 const Greet = () => {;
 
@@ -9,10 +10,8 @@ useEffect(() => {
 }, [name]);
 
 return <div>
-    <input type="text" name="name" onChange={(event) => {
-                    setName(event.target.value)
-                }}/>
-    <h3>Hello {name}</h3>
+
+    <GreetChild setName={setName} name={name}/>
     </div>;
 }
 
